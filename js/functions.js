@@ -21,6 +21,11 @@ function limpiar() {
   
 }
 
+function limpiarReinas() {
+  document.querySelectorAll("td").forEach(td=>td.style.backgroundImage="none");  
+  
+}
+
 function changeColor(r, c) {
     var celda= document.getElementById("board");
     var r1=r, c1=c , r2=r, c2=c;
@@ -44,4 +49,23 @@ function changeColor(r, c) {
           celda.rows[r4++].cells[c4--].style.backgroundColor = "red";
         }
   }
+}
+
+function solution1(){
+  limpiarReinas();
+  counter=8;
+  var celda= document.getElementById("board");
+  var style=`
+            background-image: url('./img/chessqueen.png');   
+            background-size:3.7rem;
+            background-repeat:no-repeat; 
+            background-position:center; `;
+  celda.rows[0].cells[0].style=style;
+  celda.rows[1].cells[1].style=style;
+  celda.rows[2].cells[2].style=style;
+  celda.rows[3].cells[3].style=style;
+  celda.rows[4].cells[4].style=style;
+  celda.rows[5].cells[5].style=style;
+  celda.rows[6].cells[6].style=style;
+  celda.rows[7].cells[7].style=style;
 }
